@@ -1,175 +1,191 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600&family=Major+Mono+Display&display=swap');
 
-body {
-	font-family: IBM Plex Sans;
-	font-size: 18px;
-	line-height: 1.2;
-	
-	background-color: #c2c2c2;
-  background-image: url(frame-1.png);
-	background-repeat: repeat-x;
-  background-position: center;
-  background-attachment: scroll;
-  background-size: 20px 100%;
-	color: #333333;
-	margin: 80px auto 48px auto;
-	width: 1125px;
+ * {
+     -moz-box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+ }
+ body,
+ html {
+     min-height: 100vh;
+     margin: 0px;
+     padding: 0px;
+
+    display: -webkit-box;
+     display: -moz-box;
+     display: -ms-flexbox;
+     display: -webkit-flex;
+     display: flex;
+
+     -webkit-flex-wrap: wrap;
+     -moz-flex-wrap: wrap;
+     -ms-flex-wrap: wrap;
+     flex-wrap: wrap;
+
+     -webkit-align-items: center;
+     -moz-align-items: center;
+     -ms-align-items: center;
+     align-items: center;
+ }
+
+ body {
+     background-color: #fff;
+     padding: 2rem;
+     width: auto;
+     margin: auto;
+
+     font-style: normal;
+     font-family: Major Mono Display, sans-serif;
+     font-size: 1.5rem;
+	   line-height: 1.1;
+      letter-spacing: -0.0125em;
+     text-rendering: optimizeLegibility;
 }
 header {
-  display:  flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0;
+  margin: 0.5rem auto;
 }
-h1, nav, footer {
-  font-family: Major Mono Display;
-	font-size: 40px;
-	font-weight: 700;
-}
-h1 span {
-  color: #fe611a;
-}
-h1 {
+.imgholder {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 280px;
   justify-content: center;
+  align-content: center;
+  margin: 1.5rem auto;
+  padding: 0;
+}
+
+section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #FEDA00;
+  justify-content: center;
+  margin-bottom: 2.2rem;
+}
+div.line {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  height: 80%;
+  border-right: 0.2rem solid white;
+  border-bottom: 0.2rem solid white;
+  background-color:  #c1beb7;
+  margin: 1rem 1rem;
+  padding: 1rem 1rem;
+}
+img {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  margin: 1rem auto;
+  padding: 0;
+  border: none;
+  border-bottom: none;
+}
+.lownav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+h1 {
+  display: block;
+  font-family: IBM Plex Sans, sans serif;
+  font-weight: 100;
+  text-align: center;
+  line-height: 5rem;
+  font-size: 5rem;
+  letter-spacing: 0.1em;
+  margin: 0;
+  padding: 0;
 }
 h2 {
-  font-family: IBM Plex Sans;
-  font-size: 24px;
-  font-weight: 400;
+  font-size: 1.3rem;
   line-height: 1.2;
-  margin:  16px 0 0 0;
+  text-align: center;
+  margin: 2rem auto;
 }
-a  {
-  color: #000000;
-	font-size: 24px;
-	font-weight: 700;
-  text-decoration: none;
-  margin: 0 0 0 32px; 
-  transition: color 0.2s, border-bottom 0.3s;
-  border-bottom: 2px solid transparent;
-}
-a:hover, a.selected {
+h2 span {
   color: #fe611a;
-  border-bottom: 2px solid #fe611a;
 }
-section {
-  margin: 80px auto 80px auto;
-  display:  grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 32px 32px;
-  grid-auto-flow:  dense;
-}
-section h1 {
-  grid-column: 3/span 8;
+h3 {
+  font-size: 1rem;
   text-align: center;
 }
-section.project div.artwork {
-	grid-column: 1/span 12;
-  align-items:  center;
-  margin: 24px 0 0 0;
+p {
+  font-size: 1.05rem;
+  font-family: IBM Plex Sans, sans serif;
+  text-rendering: optimizeLegibility;
+  font-weight: 400;
+   letter-spacing: -0.1px;
+   line-height: 1.3em;
 }
-section.project p {
-  grid-column: 1/span 10;
-  margin: 3px 0 0 0;
+p span {
+  font-weight: 600;
 }
-section.project img {
-  max-height:  640px;
-  border-radius: 5px;
+
+a  {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.2s, border-bottom 0.3s, background-color 0.8s;
+  border-bottom: none;
+  padding: 0.5rem;
+  margin: 0;
 }
-section.about div.text {
-  grid-column: 3/span 8;
-  align-items: center;
-  justify-content: center;
+a:hover, button:hover {
+  border-bottom: solid 0.02rem #fe611a;
+  background-color: #fe611a;
 }
-section.about h1 {
-  grid-column: 3/span 6;
-  align-items: center;
-  justify-content: center;
+a.selected {
+  color: #fe611a;
 }
-section.about p {
-  margin: 18px 0 18px 0;
-  line-height: 1.7;
-	font-family: IBM Plex Sans;
+button {
+  font-family: IBM Plex Sans, sans serif;
+  font-weight: 200;
+  background-color: #FEDA00;
+  padding: 1 auto;
+  margin: 0.5rem auto;
+  border: none;
+  padding: 0.5rem;
+  border-bottom: solid 0.02rem #FEDA00;
+  font-size: 1rem;
+  transition: border-bottom 0.3s, background-color 0.8s;
+}
+section.about div.line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.text {
+  max-width: 30rem;
+}
+div.two {
+  max-width: 32rem;
+  line-height: 1.2rem;
+  font-size: 1rem;
+  margin: 2rem;
+}
+li {
+  background-color: #FFFFFF;
+  margin: 1rem auto;
+  list-style-type: none;
+  padding: 0.05rem;
+  letter-spacing: -0.6px;
+  line-height: 1.1em;
 }
 footer {
   display:  flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-footer a {
-  margin: 18px 32px 0 32px;
-}
-
-@media (max-width: 1248px) {
-  body {
-    width:  auto;
-    margin: 80px 64px 48px 64px; 
-  }
-}
-@media (max-width: 920px) {
-  header {
-   flex-direction: column;
-   }
-  h1, footer a {
-    font-size: 18px;
-  } 
-  nav a {
-    font-size: 18px;
-  }
-  header img {
-    max-width: 300px;
-  }
-  header a {
-    margin: 0 16px 0 16px;
-  }
-}
-@media (max-width: 660px){
-  nav a, footer a {
-    font-size: 14px;
-    margin: 32px 12px 12px 0;
-  }
-  header img {
-    max-width: 200px;
-  }
-  section {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px 24px;
-    margin: 0 18px 0 18px;
-  } 
-  section h1, h2 {
-    grid-column: 1/span 4;
-    margin: 24px 0 0 0;
-    font-size: 16px;
-  }
-  section.project div.artwork,
- 	section.about h1,
-  section.about div.text {
-    grid-column: 1/span 4;
-    margin: 24px 0 0 0;
-  }
-  section.about p, 
-  section.project p{
-    font-size: 12px;
-    grid-column: 1/span 4;
-  }
-}
-@media (max-width:500px) {
-  body {
-    margin: 12px 12px 12px 12px;
-  }
-  header img{
-    width:100%;
-    margin: 24px 0 0 0;
-}
-  nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  h2 {
-    font-size: 14px;
-    margin: 12px 0 0 0;
-  }
+  justify-content: space-between;
+  margin: 1.5rem auto;
+  padding: 0.2rem;
+  font-size: 1.3rem;
 }
